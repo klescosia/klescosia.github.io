@@ -1,5 +1,5 @@
 ---
-title: Welcome to Quartz
+title: Welcome to my Kyle's Second Brain
 ---
 
 This is a blank Quartz installation.
