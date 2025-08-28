@@ -40,7 +40,7 @@ But here’s something I quickly learned: building dashboards isn’t just about
 
 That’s where **data modeling** comes in. The **data model** is like a playbook that organizes your basketball team. Without it, your players have no way to read the games, break down the plays, learn from past performance, or improve for the next match. 
 
-Skipping the data model is like **trading Luka Dončić to the Lakers** — disastrous and catastrophic. You’re setting yourself up for chaos, confusion, and a whole lot of regret. (Yes, I’m talking about you, Nico.)
+Skipping the data model is like **trading Luka Dončić to the Lakers** — disastrous and catastrophic. You’re setting yourself up for chaos, confusion, and a whole lot of regret. (Yes, I’m talking about you, Nico Harrison.)
 
 # Data Modeling
 
@@ -63,3 +63,19 @@ Skipping the data model is like **trading Luka Dončić to the Lakers** — disa
 --- 
 
 *This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only.*
+
+<script src="https://giscus.app/client.js"
+        data-repo="klescosia/klescosia.github.io"
+        data-repo-id="R_kgDONzZtKg"
+        data-category="Announcements"
+        data-category-id="DIC_kwDONzZtKs4CqTIR"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>

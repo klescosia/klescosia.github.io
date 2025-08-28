@@ -30,9 +30,25 @@ export const defaultContentPageLayout: PageLayout = {
   right: [
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+    Component.Graph()
   ],
   afterBody: [
-    Component.Graph()
+  Component.Comments({
+      provider: 'giscus',
+      options: {
+        // from data-repo
+        repo: 'klescosia/klescosia.github.io',
+        // from data-repo-id
+        repoId: 'R_kgDONzZtKg',
+        // from data-category
+        category: 'Announcements',
+        // from data-category-id
+        categoryId: 'DIC_kwDONzZtKs4CqTIR',
+        themeUrl: 'https://giscus.app/themes/', 
+        lightTheme: 'noborder_light', 
+        darkTheme: 'noborder_dark',
+      }
+    })
   ]
 }
 

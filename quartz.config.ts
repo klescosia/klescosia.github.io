@@ -1,5 +1,6 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
+import { CustomOgImages } from "./quartz/plugins/emitters/ogImage"
 
 /**
  * Quartz 4.0 Configuration
@@ -38,7 +39,7 @@ const config: QuartzConfig = {
           secondary: "#5c4d7d",
           tertiary: "#7209B7",
           highlight: "rgb(243, 255, 107)",
-          textHighlight: "#F72585",
+          textHighlight: "#F72585ç",
         },
         darkMode: {
           light: "#161618",
@@ -87,7 +88,7 @@ const config: QuartzConfig = {
       }),
       Plugin.Assets(),
       Plugin.Static(),
-      Plugin.NotFoundPage(),
+      Plugin.NotFoundPage()
     ],
   },
 }
