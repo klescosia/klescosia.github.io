@@ -18,7 +18,6 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Breadcrumbs(),
     Component.ArticleTitle(),
     // Component.ContentMeta(),
-    Component.TagList(),
   ],
   left: [
     Component.PageTitle(),
@@ -33,6 +32,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph()
   ],
   afterBody: [
+  Component.TagList(),
   Component.Comments({
       provider: 'giscus',
       options: {

@@ -25,8 +25,8 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Nunito",
+        header: "Myriad Pro",
+        body: "Myriad Pro Light",
         code: "IBM Plex Mono",
       },
       colors: {

@@ -1,3 +1,11 @@
+---
+title: Data Warehousing and Business Intelligence
+tags:
+  - "#data-engineering"
+  - business-intelligence
+---
+
+
 Back when I was starting out in my data career, the big trend was **Data Warehousing and Business Intelligence (BI).** Every company I worked with was racing to build dashboards and reports that could help them make better decisions.
 
 Why? Because companies rely on data to answer questions like: _What’s selling well? Where are we losing money? Which marketing campaigns are working?_ Dashboards and reports promised to turn raw data into **actionable insights.**
@@ -41,24 +49,6 @@ But here’s something I quickly learned: building dashboards isn’t just about
 That’s where **data modeling** comes in. The **data model** is like a playbook that organizes your basketball team. Without it, your players have no way to read the games, break down the plays, learn from past performance, or improve for the next match. 
 
 Skipping the data model is like **trading Luka Dončić to the Lakers** — disastrous and catastrophic. You’re setting yourself up for chaos, confusion, and a whole lot of regret. (Yes, I’m talking about you, Nico Harrison.)
-
-# Data Modeling
-
-## Components of a Data Model
-
-- **Entities (or tables)** - The “things” you track (like customers, orders, products).
-- **Attributes (or columns)** - Details about those things (like customer name, order date, product price).
-- **Relationships** - How things connect (like which customer placed which order).
-
-## Data Model Types
-- Conceptual Data Models
-- Logical Data Models
-- Physical Data Models
-## Data Model Techniques
-- Dimensional Modeling
-	- Fact Tables
-	- Dimensions
-- Data Vault Modeling
 
 --- 
 

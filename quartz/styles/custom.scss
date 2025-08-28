@@ -1,3 +1,10 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+@font-face {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+  src: url("/static/myriad-pro/MYRIADPRO-REGULAR.OTF") format("OTF");
+}

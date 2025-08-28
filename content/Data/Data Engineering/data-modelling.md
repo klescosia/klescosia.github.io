@@ -1,3 +1,9 @@
+---
+title: Data Modelling
+tags:
+  - data-engineering
+  - business-intelligence
+---
 
 ## Components of a Data Model
 
