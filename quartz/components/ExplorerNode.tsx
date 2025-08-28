@@ -163,6 +163,11 @@ type ExplorerNodeProps = {
 }
 
 export function ExplorerNode({ node, opts, fullPath, fileData }: ExplorerNodeProps) {
+  // Print if node is child
+  if (node.depth > 0) {
+    console.log(`Child node: ${node.displayName} at depth ${node.depth}`)
+  }
+  
   // Get options
   const folderBehavior = opts.folderClickBehavior
   const isDefaultOpen = opts.folderDefaultState === "open"

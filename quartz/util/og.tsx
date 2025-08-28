@@ -3,6 +3,7 @@ import { GlobalConfiguration } from "../cfg"
 import { QuartzPluginData } from "../plugins/vfile"
 import { JSXInternal } from "preact/src/jsx"
 import { ThemeKey } from "./theme"
+import { log } from "console"
 
 /**
  * Get an array of `FontOptions` (for satori) given google font names
@@ -11,8 +12,8 @@ import { ThemeKey } from "./theme"
  * @returns FontOptions for header and body
  */
 export async function getSatoriFont(headerFontName: string, bodyFontName: string) {
-  const headerWeight = 700 as FontWeight
-  const bodyWeight = 400 as FontWeight
+  const headerWeight = 400 as FontWeight
+  const bodyWeight = 100 as FontWeight
 
   // Fetch fonts
   const headerFont = await fetchTtf(headerFontName, headerWeight)
@@ -38,6 +39,7 @@ async function fetchTtf(fontName: string, weight: FontWeight): Promise<ArrayBuff
     const cssResponse = await fetch(
       `https://fonts.googleapis.com/css2?family=${fontName}:wght@${weight}`,
     )
+
     const css = await cssResponse.text()
 
     // Extract .ttf url from css file

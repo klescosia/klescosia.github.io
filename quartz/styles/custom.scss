@@ -1,10 +1,13 @@
 @use "./base.scss";
 
 // put your custom CSS here!
-@font-face {
-  font-family: "Myriad Pro";
-  font-style: normal;
-  font-weight: normal;
-  font-display: swap;
-  src: url("/static/myriad-pro/MYRIADPRO-REGULAR.OTF") format("OTF");
+body {
+    font-family: 'Noto Sans Light', sans-serif;
+    font-weight: 100;
+}
+h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li, strong {
+    font-family: var(--headerFont);
+    color: var(--dark);
+    font-weight: 500;
+    margin-bottom: 0;
 }

@@ -20,13 +20,13 @@ const config: QuartzConfig = {
     baseUrl: "klescosia.github.io",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages: false,
+    generateSocialImages: true,
     theme: {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Myriad Pro",
-        body: "Myriad Pro Light",
+        header: "Noto Sans",
+        body: "Noto Sans",
         code: "IBM Plex Mono",
       },
       colors: {
