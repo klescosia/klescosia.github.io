@@ -17,8 +17,9 @@
 
 
 --- 
-*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only.*
-
 
 *References*:
 Fayyad, U., Piatetsky-Shapiro, G., & Smyth, P. (1996). From Data Mining to Knowledge Discovery in Databases. _AI Magazine_, _17_(3), 37. https://doi.org/10.1609/aimag.v17i3.1230
+
+---
+*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only.*
