@@ -1,13 +1,55 @@
 @use "./base.scss";
 
-// put your custom CSS here!
-body {
-    font-family: 'Noto Sans Light', sans-serif;
-    font-weight: 100;
+/* Local font faces for Myriad Pro */
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/static/myriad-pro/Myriad Pro Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/static/myriad-pro/Myriad Pro Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/static/myriad-pro/Myriad Pro Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Pro";
+  src: url("/static/myriad-pro/Myriad Pro Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Myriad Pro Light";
+  src: url("/static/myriad-pro/Myriad Pro Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Use theme variables so config controls families */
+body {
+  font-family: var(--bodyFont);
+  font-weight: 300;
+}
+
 h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li, strong {
-    font-family: var(--headerFont);
-    color: var(--dark);
-    font-weight: 500;
-    margin-bottom: 0;
+  font-family: var(--headerFont);
+  color: var(--dark);
+  font-weight: 500;
+  margin-bottom: 0;
 }

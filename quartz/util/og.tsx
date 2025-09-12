@@ -13,18 +13,29 @@ import { log } from "console"
  */
 export async function getSatoriFont(headerFontName: string, bodyFontName: string) {
   const headerWeight = 400 as FontWeight
-  const bodyWeight = 100 as FontWeight
+  const bodyWeight = 400 as FontWeight
 
-  // Fetch fonts
-  const headerFont = await fetchTtf(headerFontName, headerWeight)
-  const bodyFont = await fetchTtf(bodyFontName, bodyWeight)
-
-  // Convert fonts to satori font format and return
-  const fonts: SatoriOptions["fonts"] = [
-    { name: headerFontName, data: headerFont, weight: headerWeight, style: "normal" },
-    { name: bodyFontName, data: bodyFont, weight: bodyWeight, style: "normal" },
-  ]
-  return fonts
+  try {
+    // Try fetching requested fonts from Google Fonts (works for Google families)
+    const headerFont = await fetchTtf(headerFontName, headerWeight)
+    const bodyFont = await fetchTtf(bodyFontName, bodyWeight)
+    const fonts: SatoriOptions["fonts"] = [
+      { name: headerFontName, data: headerFont, weight: headerWeight, style: "normal" },
+      { name: bodyFontName, data: bodyFont, weight: bodyWeight, style: "normal" },
+    ]
+    return fonts
+  } catch (_e) {
+    // Fallback to a widely available Google font so OG generation still works
+    const fallbackHeader = "Noto Sans"
+    const fallbackBody = "Noto Sans"
+    const headerFont = await fetchTtf(fallbackHeader, headerWeight)
+    const bodyFont = await fetchTtf(fallbackBody, bodyWeight)
+    const fonts: SatoriOptions["fonts"] = [
+      { name: fallbackHeader, data: headerFont, weight: headerWeight, style: "normal" },
+      { name: fallbackBody, data: bodyFont, weight: bodyWeight, style: "normal" },
+    ]
+    return fonts
+  }
 }
 
 /**

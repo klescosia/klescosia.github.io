@@ -22,11 +22,11 @@ const config: QuartzConfig = {
     defaultDateType: "created",
     generateSocialImages: true,
     theme: {
-      fontOrigin: "googleFonts",
+      fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Noto Sans",
-        body: "Noto Sans",
+        header: "Myriad Pro",
+        body: "Myriad Pro Light",
         code: "IBM Plex Mono",
       },
       colors: {

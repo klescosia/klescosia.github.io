@@ -42,8 +42,21 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Backlinks(),
   ],
   afterBody: [
-  Component.TagList(),
-  Component.Comments({
+    // Mobile explorer shown below content for better layout
+    Component.MobileOnly(
+      Component.Explorer({
+        folderDefaultState: "open",
+        mapFn: (node) => {
+          if (!node.file) {
+            node.displayName = node.displayName
+          } else {
+            node.displayName = "/ " + node.displayName
+          }
+        },
+      }),
+    ),
+    Component.TagList(),
+    Component.Comments({
       provider: 'giscus',
       options: {
         // from data-repo
@@ -80,5 +93,19 @@ export const defaultListPageLayout: PageLayout = {
       },
     })),
   ],
-  right: [],
+  right: [Component.MobileOnly(
+      Component.Explorer({
+        folderDefaultState: "open",
+        mapFn: (node) => {
+          if (!node.file) {
+            node.displayName = "📁 " + node.displayName
+          } else {
+            node.displayName = "📄 " + node.displayName
+          }
+        },
+      }),
+    ),],
+  afterBody: [
+    
+  ],
 }
