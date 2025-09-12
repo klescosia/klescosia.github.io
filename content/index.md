@@ -1,5 +1,5 @@
 ---
-title: Welcome to my Technical Blog
+title: Kyle Escosia
 ---
 
 Hello, I'm Kyle, a Data Engineer from the Philippines! I'm passionately curious in anything about data. I'm an advocate of the Growth Mindset. I believe that anything can be learned and the key to improvement is consistency and the right mindset. I'm an **AWS Community Builder** and I casually share my experiences and opinions at **Data Engineering Pilipinas Group**.

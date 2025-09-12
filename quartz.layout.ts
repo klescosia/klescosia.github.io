@@ -8,6 +8,8 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      GitHub: "https://github.com/klescosia",
+      RSS: "/index.xml",
     },
   }),
 }
@@ -35,9 +37,9 @@ export const defaultContentPageLayout: PageLayout = {
     })),
   ],
   right: [
+    Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
-    Component.Graph()
   ],
   afterBody: [
   Component.TagList(),

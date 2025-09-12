@@ -10,14 +10,14 @@ import { CustomOgImages } from "./quartz/plugins/emitters/ogImage"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "Kyle Escosia",
-    pageTitleSuffix: "",
+    pageTitleSuffix: " · esck.dev",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
       provider: "google", tagId: "G-JN4JYXHLP5"
     },
     locale: "en-US",
-    baseUrl: "klescosia.github.io",
+    baseUrl: "esck.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     generateSocialImages: true,
@@ -39,7 +39,7 @@ const config: QuartzConfig = {
           secondary: "#5c4d7d",
           tertiary: "#7209B7",
           highlight: "rgb(243, 255, 107)",
-          textHighlight: "#F72585ç",
+          textHighlight: "#F72585",
         },
         darkMode: {
           light: "#161618",
@@ -86,6 +86,7 @@ const config: QuartzConfig = {
         enableSiteMap: true,
         enableRSS: true,
       }),
+      Plugin.CNAME(),
       Plugin.Assets(),
       Plugin.Static(),
       Plugin.NotFoundPage()
