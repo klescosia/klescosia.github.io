@@ -1,5 +1,5 @@
 ---
-title: Kyle Escosia
+title: the purple cloud
 ---
 
 Hello, I'm Kyle, a Data Engineer from the <mark>Philippines.</mark> I'm passionately curious about anything data, and an advocate of the **Growth Mindset**: I believe anything can be learned, and the key to improvement is consistency.
