@@ -55,14 +55,6 @@ h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
 .center h2, article h2 { letter-spacing: -0.01em; }
 .center p, article p   { line-height: 1.75; }
 
-/* Quartz base sets `hyphens: auto` — kills the mid-word "ad-vocate"
-   breaks; wrap whole words like the mockup. */
-body, .center, article {
-  hyphens: manual;
-  -webkit-hyphens: manual;
-}
-.center p, article p { text-wrap: pretty; }
-
 /* ============================================================
    READING MEASURE — keep every center element on one calm column.
    Center DOM: .center > .page-header (breadcrumbs + title)
@@ -213,16 +205,11 @@ mark {
    treatments above (these must come AFTER the global rules)
    ============================================================ */
 /* Feed rows: no underline on title/meta; hide Quartz's injected
-   external-link svg (we render our own ↗ in .pc-ext).
-   NOTE: `!important` is required — the global rule above is
-   `.center a:not(.internal):not(.tag-link)` whose :not() selectors give it
-   (0,3,1) specificity, which beats any sane feed selector. */
-.pc-feed li a,
-.pc-feed li a:hover {
-  text-decoration: none !important;
-  color: inherit;
+   external-link svg (we render our own ↗ in .pc-ext) */
+.center .pc-feed li a, article .pc-feed li a {
+  text-decoration: none;
+  &:hover { text-decoration: none; }
 }
-.pc-feed li a * { text-decoration: none !important; }
 .pc-feed a .external-icon { display: none; }
 
 /* Note cards: wikilinks are `a.internal`, which normally get the chip
@@ -264,29 +251,6 @@ code { font-family: var(--codeFont); background: var(--highlight); color: var(--
 #search-container .search-button, .darkmode, .search .search-button { border-radius: 10px; }
 
 ::selection { background: var(--textHighlight); color: var(--dark); }
-
-/* ============================================================
-   LINK PREVIEW POPOVERS — force the card treatment (solid paper
-   bg, border, shadow). Defensive `!important` because the stock
-   popover styles were observed not applying on the live build.
-   ============================================================ */
-.popover {
-  z-index: 999;
-  & > .popover-inner {
-    width: 24rem !important;
-    max-height: 16rem !important;
-    background-color: var(--light) !important;
-    border: 1px solid var(--lightgray) !important;
-    border-radius: 12px !important;
-    box-shadow: 0 18px 50px rgba(44, 34, 48, 0.20) !important;
-    padding: 0.2rem 1.1rem 1rem !important;
-    font-size: 0.85rem !important;
-  }
-  /* popovers preview the note body — hide nav chrome inside them */
-  .breadcrumb-container { display: none !important; }
-  h1 { font-size: 1.15rem !important; margin-top: 0.8rem !important; }
-  h2 { font-size: 0.95rem !important; }
-}
 
 /* ============================================================
    404 PAGE  (themed component → quartz/components/pages/404.tsx)
