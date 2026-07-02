@@ -34,8 +34,8 @@ const config: QuartzConfig = {
       fontOrigin: "local",
       cdnCaching: true,
       typography: {
-        header: "Myriad Pro",
-        body: "Myriad Pro Light",
+        header: "Source Sans 3",
+        body: "Source Sans 3",
         code: "IBM Plex Mono",
       },
       colors: {

@@ -46,7 +46,7 @@ simple terms, a **dimension** is just a way of looking at your data—for exampl
 
 But here’s something I quickly learned: building dashboards isn’t just about collecting data and plugging it into a tool. For any of this to work—whether it’s slicing sales data or spotting trends—you need a **well-structured foundation.** 
 
-That’s where **data modeling** comes in. The **data model** is like a playbook that organizes your basketball team. Without it, your players have no way to read the games, break down the plays, learn from past performance, or improve for the next match. 
+That’s where [[data-modelling|data modeling]] comes in. The **data model** is like a playbook that organizes your basketball team. Without it, your players have no way to read the games, break down the plays, learn from past performance, or improve for the next match. 
 
 Skipping the data model is like **trading Luka Dončić to the Lakers** — disastrous and catastrophic. You’re setting yourself up for chaos, confusion, and a whole lot of regret. (Yes, I’m talking about you, Nico Harrison.)
 

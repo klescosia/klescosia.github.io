@@ -14,7 +14,7 @@ import { fileURLToPath } from "node:url"
 import { dirname, join } from "node:path"
 
 // ---- config ----
-const USERNAME = "klescosia"
+const USERNAME = "escosiakyle" // dev.to handle (NOT the GitHub handle klescosia)
 const LIMIT = 30        // max posts (dev.to returns newest-first)
 const MAX_TAGS = 3      // tags shown per row
 const SHOW_REACTIONS = false // append "· 42 ❤" to the meta line
@@ -30,7 +30,8 @@ const fmtDate = (iso) => {
   return isNaN(d) ? "" : d.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })
 }
 
-function row(a) {
+function row(a, i, total) {
+  const num = String(total - i).padStart(2, "0")
   const date = fmtDate(a.published_at)
   const tags = (a.tag_list ?? [])
     .slice(0, MAX_TAGS)
@@ -41,7 +42,7 @@ function row(a) {
     .filter(Boolean)
     .join(' <span class="pc-dot">·</span> ')
   return (
-    `  <li><a href="${a.url}" target="_blank" rel="noopener">` +
+    `  <li><a href="${a.url}" target="_blank" rel="noopener" data-num="${num}">` +
     `<span class="pc-feed-title">${esc(a.title)} <span class="pc-ext">↗</span></span>` +
     (meta ? `<span class="pc-feed-meta">${meta}</span>` : "") +
     `</a></li>`
@@ -67,7 +68,7 @@ async function main() {
     process.exit(0)
   }
 
-  const block = `${START}\n<ol class="pc-feed">\n${articles.map(row).join("\n")}\n</ol>\n${END}`
+  const block = `${START}\n<ol class="pc-feed">\n${articles.map((a, i) => row(a, i, articles.length)).join("\n")}\n</ol>\n${END}`
 
   const md = await readFile(INDEX_PATH, "utf8")
   const re = new RegExp(`${START}[\\s\\S]*?${END}`)

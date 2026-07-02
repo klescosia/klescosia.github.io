@@ -4,6 +4,7 @@ tags:
   - data-engineering
   - business-intelligence
 ---
+Data modeling is the foundation of analytics — used heavily in [[data-warehousing-and-business-intelligence|Data Warehousing & BI]].
 
 ## Components of a Data Model
 
@@ -19,7 +20,6 @@ tags:
 	- Fact Tables
 	- Dimensions
 - Data Vault Modeling
-
 
 
 --- 
