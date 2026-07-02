@@ -2,11 +2,14 @@
 title: Kyle Escosia
 ---
 
-Hello, I'm Kyle — a Data Engineer from the <mark>Philippines.</mark> I'm passionately curious about anything data, and an advocate of the **Growth Mindset**: I believe anything can be learned, and the key to improvement is consistency.
+<div class="pc-hero">
+<span class="pc-badge">AWS Community Builder</span>
+<h1 class="pc-hero-title">Hello, I'm Kyle — a Data Engineer from the <mark>Philippines.</mark></h1>
+</div>
 
-I'm an **AWS Community Builder**, and I casually share my experiences and opinions at the [Data Engineering Pilipinas](https://www.facebook.com/groups/dataengineeringpilipinas) group.
+I'm passionately curious about anything data. I'm an advocate of the **Growth Mindset** — I believe anything can be learned, and the key to improvement is consistency and the right mindset. I'm an **AWS Community Builder** and I casually share my experiences and opinions at the **Data Engineering Pilipinas Group**.
 
-<p class="pc-section">Notes</p>
+<h2 class="pc-section">Notes</h2>
 
 <div class="pc-cards">
 
@@ -15,7 +18,7 @@ I'm an **AWS Community Builder**, and I casually share my experiences and opinio
 
 </div>
 
-<p class="pc-section">dev.to Writing</p>
+<h2 class="pc-section">dev.to Writing</h2>
 
 <!-- devto:start -->
 <ol class="pc-feed">

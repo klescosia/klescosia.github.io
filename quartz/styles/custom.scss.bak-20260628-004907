@@ -200,35 +200,6 @@ mark {
   color: inherit; padding: 0 2px; border-radius: 0;
 }
 
-/* ============================================================
-   OVERRIDES — exempt feed rows + note cards from the global link
-   treatments above (these must come AFTER the global rules)
-   ============================================================ */
-/* Feed rows: no underline on title/meta; hide Quartz's injected
-   external-link svg (we render our own ↗ in .pc-ext) */
-.center .pc-feed li a, article .pc-feed li a {
-  text-decoration: none;
-  &:hover { text-decoration: none; }
-}
-.pc-feed a .external-icon { display: none; }
-
-/* Note cards: wikilinks are `a.internal`, which normally get the chip
-   background — inside .pc-cards they must render as paper cards */
-.pc-cards li a.internal {
-  display: block;
-  background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-radius: 11px;
-  padding: 0.85rem 1rem;
-  font-size: 0.98rem; font-weight: 600; color: var(--secondary); line-height: 1.3;
-  transition: border-color 0.15s ease, transform 0.15s ease;
-  &:hover {
-    background: var(--light);
-    border-color: var(--secondary);
-    transform: translateY(-2px);
-  }
-}
-
 /* Explorer / TOC headers → mono tracked */
 .explorer button#explorer, .toc > button {
   font-family: var(--codeFont) !important;

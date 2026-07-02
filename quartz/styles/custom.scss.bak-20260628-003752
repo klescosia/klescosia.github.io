@@ -1,12 +1,11 @@
 @use "./base.scss";
 
 /* ============================================================
-   THE PURPLE CLOUD — autumn-deep brand layer  (v3: honest layout)
+   THE PURPLE CLOUD — autumn-deep brand layer  (v2: + editorial polish)
    Replaces quartz/styles/custom.scss
-   Colors come from theme.colors in quartz.config.ts. This file works
-   WITH Quartz's real grid (320 / auto / 320, 6rem top) instead of
-   fighting it: one cloud (sidebar title), a constrained reading
-   measure, calm type, editorial list/card/callout treatments.
+   Colors come from theme.colors in quartz.config.ts; this file
+   adds the type scale, hero, badge, section labels and list rhythm
+   that make the build match the brand mockup.
    ============================================================ */
 
 /* ---- Local font faces for Myriad Pro (unchanged) ---- */
@@ -46,30 +45,18 @@ body {
 h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
   font-family: var(--headerFont);
   color: var(--dark);
+  font-weight: 500;
   margin-bottom: 0;
 }
 
-/* Heading scale — keep Quartz's own sizes (h1 2rem, h2 1.4rem); only
-   tighten tracking so big headings feel composed, not oversized. */
-.center h1, article h1 { letter-spacing: -0.02em; }
-.center h2, article h2 { letter-spacing: -0.01em; }
+/* Note-page heading scale → match the mockup */
+.center h1, article h1 { font-size: 2.4rem; font-weight: 700; letter-spacing: -0.025em; line-height: 1.12; }
+.center h2, article h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.01em; margin-top: 2rem; }
+.center h3, article h3 { font-size: 1.2rem; font-weight: 600; }
 .center p, article p   { line-height: 1.75; }
 
 /* ============================================================
-   READING MEASURE — keep every center element on one calm column.
-   Center DOM: .center > .page-header (breadcrumbs + title)
-                        > article (content)
-                        > hr
-                        > .page-footer (tags + comments)
-   ============================================================ */
-.center > .page-header,
-.center > article,
-.center > hr,
-.center > .page-footer { max-width: 720px; }
-.center > hr { border: none; border-top: 1px solid var(--lightgray); margin: 2rem 0; }
-
-/* ============================================================
-   BRAND IDENTITY — sidebar title lockup (the ONE cloud)
+   BRAND IDENTITY — title lockup
    ============================================================ */
 .page-title {
   font-weight: 600;
@@ -87,42 +74,75 @@ h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
 }
 
 /* ============================================================
-   SECTION LABELS  (mono, tracked — "Notes", "dev.to Writing")
-   Authored as <p class="pc-section"> so they don't pollute the TOC.
+   HOMEPAGE HERO  (only on pages that contain .pc-hero)
    ============================================================ */
-.pc-section {
-  font-family: var(--codeFont) !important;
-  font-size: 0.74rem !important; font-weight: 500 !important;
-  letter-spacing: 0.18em; text-transform: uppercase;
-  color: var(--gray) !important; margin: 2.4rem 0 0.7rem !important;
+/* Hide the default "Kyle Escosia" page-title h1 when a custom hero is present */
+body:has(.pc-hero) .center > .page-header,
+body:has(.pc-hero) article > h1:first-child { display: none; }
+
+.pc-hero {
+  position: relative;
+  padding-left: 4.4rem;
+  margin: 0.5rem 0 1.4rem;
+  &::before {
+    content: ""; position: absolute; left: 0; top: 0.15rem;
+    width: 3.3rem; height: 3.3rem;
+    background-color: var(--secondary);
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>') no-repeat center / contain;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>') no-repeat center / contain;
+    animation: pcfloat 6s ease-in-out infinite;
+  }
+}
+.pc-badge {
+  display: inline-flex; align-items: center;
+  font-family: var(--codeFont);
+  font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ambertext, #a55c1c);
+  background: var(--amberchip, #f4e3cf);
+  padding: 0.34rem 0.7rem; border-radius: 20px; margin-bottom: 0.9rem;
+}
+.pc-hero-title {
+  font-size: 2.25rem; font-weight: 700; line-height: 1.12; letter-spacing: -0.025em;
+  color: var(--dark); margin: 0; max-width: 26ch;
+}
+/* Lead paragraph — the line right after the hero */
+.pc-hero + p {
+  font-size: 1.12rem; font-weight: 300; line-height: 1.6;
+  color: var(--gray); max-width: 40rem; margin: 1rem 0 2.2rem;
+  strong { color: var(--dark); font-weight: 600; }
 }
 
-/* ============================================================
-   NOTE CARDS  (wikilinks rendered as a two-up card row)
-   ============================================================ */
-.pc-cards ul {
-  list-style: none; padding: 0; margin: 0;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;
-  @media all and (max-width: 800px) { grid-template-columns: 1fr; }
+/* Section label — mono, tracked, faint (e.g. "dev.to Writing") */
+.pc-section {
+  font-family: var(--codeFont) !important;
+  font-size: 0.78rem !important; font-weight: 500 !important;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--gray) !important; margin: 0 0 0.4rem !important;
+}
+
+/* Editorial numbered list for the dev.to links */
+.pc-list ol {
+  list-style: none; counter-reset: pc; padding: 0; margin: 0; max-width: 46rem;
   li {
-    margin: 0;
-    a {
-      display: block; text-decoration: none;
-      background: var(--light); border: 1px solid var(--lightgray);
-      border-radius: 11px; padding: 0.85rem 1rem;
-      font-size: 0.98rem; font-weight: 600; color: var(--secondary); line-height: 1.3;
-      transition: border-color 0.15s ease, transform 0.15s ease;
-      &:hover { border-color: var(--secondary); transform: translateY(-2px); }
+    counter-increment: pc; position: relative;
+    padding: 0.95rem 0 0.95rem 2.4rem;
+    border-top: 1px solid var(--lightgray);
+    font-weight: 600;
+    &:last-child { border-bottom: 1px solid var(--lightgray); }
+    &::before {
+      content: counter(pc, decimal-leading-zero);
+      position: absolute; left: 0; top: 1.05rem;
+      font-family: var(--codeFont); font-size: 0.8rem; font-weight: 400;
+      color: var(--secondary);
     }
+    a { text-decoration: none; color: var(--dark);
+        &:hover { color: var(--secondary); } }
   }
 }
 
-/* ============================================================
-   dev.to FEED  (numbered rows with date + tags; auto-filled by
-   scripts/fetch-devto.mjs between the index.md markers)
-   ============================================================ */
+/* Editorial feed (dev.to) — numbered rows with date + tags */
 .pc-feed {
-  list-style: none; counter-reset: pc; padding: 0; margin: 0;
+  list-style: none; counter-reset: pc; padding: 0; margin: 0; max-width: 46rem;
   li {
     counter-increment: pc;
     border-top: 1px solid var(--lightgray);
@@ -134,9 +154,7 @@ h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
         content: counter(pc, decimal-leading-zero);
         position: absolute; left: 0; top: 1.05rem;
         font-family: var(--codeFont); font-size: 0.8rem; font-weight: 400; color: var(--secondary);
-        transition: transform 0.15s ease;
       }
-      &:hover::before { transform: translateX(2px); }
     }
   }
 }
@@ -151,28 +169,21 @@ h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
 .pc-tag { color: var(--secondary); }
 .pc-dot { color: var(--lightgray); margin: 0 0.1rem; }
 
-/* ============================================================
-   THEMED CALLOUTS  (Quartz [!note] / [!tip] / [!warning] …)
-   ============================================================ */
-.callout {
-  border: 1px solid var(--lightgray);
-  border-left: 3px solid var(--callout-color, var(--secondary));
-  border-radius: 8px;
-  background: color-mix(in srgb, var(--callout-color, var(--secondary)) 7%, var(--light));
-}
-.callout[data-callout="note"]      { --callout-color: #6e2b63; }
-.callout[data-callout="abstract"], .callout[data-callout="tip"],
-.callout[data-callout="info"]      { --callout-color: #c4762f; }
-.callout[data-callout="warning"], .callout[data-callout="caution"],
-.callout[data-callout="failure"], .callout[data-callout="danger"] { --callout-color: #9e2b50; }
-.callout[data-callout="success"], .callout[data-callout="question"] { --callout-color: #5c4d7d; }
-.callout-title { font-family: var(--codeFont); letter-spacing: 0.03em; }
-:root[saved-theme="dark"] {
-  .callout[data-callout="note"]      { --callout-color: #cf86c4; }
-  .callout[data-callout="abstract"], .callout[data-callout="tip"],
-  .callout[data-callout="info"]      { --callout-color: #e0954a; }
-  .callout[data-callout="warning"], .callout[data-callout="caution"],
-  .callout[data-callout="failure"], .callout[data-callout="danger"] { --callout-color: #d65b86; }
+/* Note cards (wikilinks rendered as a card row) */
+.pc-cards ul {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem;
+  li {
+    margin: 0;
+    a {
+      display: block; text-decoration: none;
+      background: var(--light); border: 1px solid var(--lightgray);
+      border-radius: 11px; padding: 0.85rem 1rem;
+      font-size: 0.98rem; font-weight: 600; color: var(--secondary); line-height: 1.3;
+      transition: border-color 0.15s ease;
+      &:hover { border-color: var(--secondary); }
+    }
+  }
 }
 
 /* ============================================================
@@ -198,35 +209,6 @@ h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
 mark {
   background: linear-gradient(transparent 58%, var(--textHighlight) 58%);
   color: inherit; padding: 0 2px; border-radius: 0;
-}
-
-/* ============================================================
-   OVERRIDES — exempt feed rows + note cards from the global link
-   treatments above (these must come AFTER the global rules)
-   ============================================================ */
-/* Feed rows: no underline on title/meta; hide Quartz's injected
-   external-link svg (we render our own ↗ in .pc-ext) */
-.center .pc-feed li a, article .pc-feed li a {
-  text-decoration: none;
-  &:hover { text-decoration: none; }
-}
-.pc-feed a .external-icon { display: none; }
-
-/* Note cards: wikilinks are `a.internal`, which normally get the chip
-   background — inside .pc-cards they must render as paper cards */
-.pc-cards li a.internal {
-  display: block;
-  background: var(--light);
-  border: 1px solid var(--lightgray);
-  border-radius: 11px;
-  padding: 0.85rem 1rem;
-  font-size: 0.98rem; font-weight: 600; color: var(--secondary); line-height: 1.3;
-  transition: border-color 0.15s ease, transform 0.15s ease;
-  &:hover {
-    background: var(--light);
-    border-color: var(--secondary);
-    transform: translateY(-2px);
-  }
 }
 
 /* Explorer / TOC headers → mono tracked */
@@ -263,12 +245,6 @@ code { font-family: var(--codeFont); background: var(--highlight); color: var(--
   .pc-404-lead { font-size: 1.15rem; font-weight: 300; color: var(--gray); max-width: 30rem; margin: 0.2rem 0 1.2rem; }
   a { color: var(--secondary); text-decoration: none; font-weight: 600;
       &:hover { color: var(--tertiary); } }
-}
-
-/* Respect reduced-motion */
-@media (prefers-reduced-motion: reduce) {
-  .pc-404-mark { animation: none; }
-  .pc-cards ul li a:hover { transform: none; }
 }
 
 /* Amber accent vars (no dedicated Quartz slot) */

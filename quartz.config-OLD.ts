@@ -1,18 +1,15 @@
 import { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 import { CustomOgImages } from "./quartz/plugins/emitters/ogImage"
-import { pcOgImage } from "./ogImage"
 
 /**
- * Quartz 4.0 Configuration — "The Purple Cloud" rebrand
- * Autumn-deep palette. Only the theme.colors block changed from your original;
- * typography (Myriad Pro / IBM Plex Mono) and all plugins are untouched.
+ * Quartz 4.0 Configuration
  *
  * See https://quartz.jzhao.xyz/configuration for more information.
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "the purple cloud",
+    pageTitle: "Kyle Escosia",
     pageTitleSuffix: " · esck.dev",
     enableSPA: true,
     enablePopovers: true,
@@ -23,13 +20,7 @@ const config: QuartzConfig = {
     baseUrl: "esck.dev",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
-    generateSocialImages: {
-      colorScheme: "lightMode",
-      width: 1200,
-      height: 630,
-      excludeRoot: false,
-      imageStructure: pcOgImage,
-    },
+    generateSocialImages: true,
     theme: {
       fontOrigin: "local",
       cdnCaching: true,
@@ -39,29 +30,27 @@ const config: QuartzConfig = {
         code: "IBM Plex Mono",
       },
       colors: {
-        // ── The Purple Cloud · Autumn Deep (warm paper) ──
         lightMode: {
-          light: "#faf4ee",        // page background — warm linen paper
-          lightgray: "#e6d8cd",    // borders, rules, graph links
-          gray: "#a9968c",         // muted text, dates, graph idle nodes
-          darkgray: "#3a3038",     // body text
-          dark: "#2c2230",         // headings, strong, logo ink
-          secondary: "#6e2b63",    // links, active nav, graph node (plum)
-          tertiary: "#9e2b50",     // hover state, graph hover (wine)
-          highlight: "#f0e2ee",    // internal-link bg, search hover (soft plum)
-          textHighlight: "#e7b65f", // ==marked text== (burnt gold)
+          light: "#faf8f8",
+          lightgray: "#e5e5e5",
+          gray: "#b8b8b8",
+          darkgray: "#4e4e4e",
+          dark: "#2b2b2b",
+          secondary: "#5c4d7d",
+          tertiary: "#7209B7",
+          highlight: "rgb(243, 255, 107)",
+          textHighlight: "#F72585",
         },
-        // ── The Purple Cloud · Autumn Deep (dark aubergine) ──
         darkMode: {
-          light: "#160d1b",        // page background — deep aubergine
-          lightgray: "#2a1c32",    // borders, rules, graph links
-          gray: "#8a7690",         // muted text, dates
-          darkgray: "#cabac4",     // body text
-          dark: "#f3e9e1",         // headings, strong
-          secondary: "#cf86c4",    // links, active nav, graph node (light plum)
-          tertiary: "#d65b86",     // hover state (light wine)
-          highlight: "rgba(207, 134, 196, 0.14)", // internal-link bg
-          textHighlight: "rgba(231, 182, 95, 0.30)", // ==marked text==
+          light: "#161618",
+          lightgray: "#393639",
+          gray: "#646464",
+          darkgray: "#d4d4d4",
+          dark: "#ebebec",
+          secondary: "#7b97aa",
+          tertiary: "#84a59d",
+          highlight: "rgba(143, 159, 169, 0.15)",
+          textHighlight: "#b3aa0288",
         },
       },
     },

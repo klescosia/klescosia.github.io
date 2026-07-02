@@ -11,14 +11,18 @@
     "type": "git",
     "url": "https://github.com/jackyzha0/quartz.git"
   },
-  "scripts": {
-    "quartz": "./quartz/bootstrap-cli.mjs",
-    "docs": "npx quartz build --serve -d docs",
-    "check": "tsc --noEmit && npx prettier . --check",
-    "format": "npx prettier . --write",
-    "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
-    "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1"
-  },
+"scripts": {
+  "quartz": "./quartz/bootstrap-cli.mjs",
+  "docs": "npx quartz build --serve -d docs",
+  "check": "tsc --noEmit && npx prettier . --check",
+  "format": "npx prettier . --write",
+  "test": "tsx ./quartz/util/path.test.ts && tsx ./quartz/depgraph.test.ts",
+  "profile": "0x -D prof ./quartz/bootstrap-cli.mjs build --concurrency=1",
+
+  "sync:devto": "node scripts/fetch-devto.mjs",
+  "site:serve": "npm run sync:devto && npm run quartz -- build --serve",
+  "site:build": "npm run sync:devto && npm run quartz -- build"
+},
   "engines": {
     "npm": ">=9.3.1",
     "node": "20 || >=22"
