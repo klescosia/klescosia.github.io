@@ -13,7 +13,7 @@ import { pcOgImage } from "./ogImage"
 const config: QuartzConfig = {
   configuration: {
     pageTitle: "the purple cloud",
-    pageTitleSuffix: " · esck.dev",
+    pageTitleSuffix: " · Kyle Escosia",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
