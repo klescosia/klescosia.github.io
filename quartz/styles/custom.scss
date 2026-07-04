@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6, strong, a, nav, button, ul, li {
    tighten tracking so big headings feel composed, not oversized. */
 .center h1, article h1 { letter-spacing: -0.02em; }
 .center h2, article h2 { letter-spacing: -0.01em; }
-.center p, article p   { line-height: 1.75; }
+.center p, article p   { line-height: 1.75; text-align: justify; }
 
 /* Quartz base sets `hyphens: auto` — kills the mid-word "ad-vocate"
    breaks; wrap whole words like the mockup. */

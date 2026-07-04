@@ -99,7 +99,7 @@ What started as a way to run Spark without babysitting a cluster became a way to
 - Delta Sharing rebranded and expanded into the open OpenSharing standard
 - Panther (cloud security analytics) acquired in June
 - Anthropic Claude Sonnet 5 and Claude Fable 5 added as Databricks hosted models in June
-- Data Warehousing crossed $1.5 billion ARR run rate by June, up from $1.0 billion in Q3 2025
+- Data Warehousing crossed \$1.5 billion ARR run rate by June, up from $1.0 billion in Q3 2025
 - Genie moving to pay as you go pricing starting July 6
 
 ---
@@ -107,9 +107,6 @@ What started as a way to run Spark without babysitting a cluster became a way to
 *Sources and References:*
 
 *Seven Academics Who Had Never Run a Company: The Origin Story of Databricks - https://www.stacksync.com/blog/seven-academics-who-had-never-run-a-company-the-origin-story-of-databricks*
-
 *Open Sourcing Delta Lake - https://www.databricks.com/blog/2019/04/24/open-sourcing-delta-lake.html*
-
 *Databricks Cloud - https://www.databricks.com/blog/2014/06/30/databricks-unveils-spark-based-cloud-platform.html*
-
 *Databricks: A Unified Data Platform - https://www.databricks.com/company/newsroom/press-releases/databricks-launches-delta-combine-best-data-lakes-data-warehouses-streaming-systems*
