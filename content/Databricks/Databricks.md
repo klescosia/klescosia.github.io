@@ -1,1 +1,0 @@
-It started with an idea of "helping people do cool things with data". 
