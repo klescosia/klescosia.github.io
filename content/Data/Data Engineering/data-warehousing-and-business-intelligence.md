@@ -52,7 +52,7 @@ Skipping the data model is like **trading Luka Dončić to the Lakers** — disa
 
 --- 
 
-*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only.*
+*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only. I may or may not have used AI tools to help draft, edit, or research parts of this post. I won't spell out where or how. Take the content on its merits and decide for yourself what that means to you.*
 
 <script src="https://giscus.app/client.js"
         data-repo="klescosia/klescosia.github.io"

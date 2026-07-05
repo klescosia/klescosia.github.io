@@ -28,4 +28,4 @@ Data modeling is the foundation of analytics — used heavily in [[data-warehous
 Fayyad, U., Piatetsky-Shapiro, G., & Smyth, P. (1996). From Data Mining to Knowledge Discovery in Databases. _AI Magazine_, _17_(3), 37. https://doi.org/10.1609/aimag.v17i3.1230
 
 ---
-*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only.*
+*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only. I may or may not have used AI tools to help draft, edit, or research parts of this post. I won't spell out where or how. Take the content on its merits and decide for yourself what that means to you.*

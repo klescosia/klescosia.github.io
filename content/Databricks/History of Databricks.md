@@ -106,7 +106,10 @@ What started as a way to run Spark without babysitting a cluster became a way to
 
 *Sources and References:*
 
-*Seven Academics Who Had Never Run a Company: The Origin Story of Databricks - https://www.stacksync.com/blog/seven-academics-who-had-never-run-a-company-the-origin-story-of-databricks*
-*Open Sourcing Delta Lake - https://www.databricks.com/blog/2019/04/24/open-sourcing-delta-lake.html*
-*Databricks Cloud - https://www.databricks.com/blog/2014/06/30/databricks-unveils-spark-based-cloud-platform.html*
-*Databricks: A Unified Data Platform - https://www.databricks.com/company/newsroom/press-releases/databricks-launches-delta-combine-best-data-lakes-data-warehouses-streaming-systems*
+- *Seven Academics Who Had Never Run a Company: The Origin Story of Databricks - https://www.stacksync.com/blog/seven-academics-who-had-never-run-a-company-the-origin-story-of-databricks*
+- *Open Sourcing Delta Lake - https://www.databricks.com/blog/2019/04/24/open-sourcing-delta-lake.html*
+- *Databricks Cloud - https://www.databricks.com/blog/2014/06/30/databricks-unveils-spark-based-cloud-platform.html*
+- *Databricks: A Unified Data Platform - https://www.databricks.com/company/newsroom/press-releases/databricks-launches-delta-combine-best-data-lakes-data-warehouses-streaming-systems*
+
+---
+*This blog is authored solely by me and reflects my personal opinions and experiences, not those of my employer. All references to products, including names, logos, and trademarks, belong to their respective owners and are used for identification purposes only. I may or may not have used AI tools to help draft, edit, or research parts of this post. I won't spell out where or how. Take the content on its merits and decide for yourself what that means to you.*
