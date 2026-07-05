@@ -44,7 +44,7 @@ Delta Lake made a Data Lake reliable by enabling ACID transactions to run on top
 
 # The Data Intelligence Platform
 
-Fast forward today, as of this writing, Databricks is valued at $134 Billion. By 2025, generative AI had changed what customers wanted from Databricks: not just a place to store and query data, but the platform AI agents run on top of. It's the same instinct that built the company in the first place, take whatever data workload is currently painful and make it disappear into a single platform, just pointed at a new problem. 
+Fast forward today, as of this writing, Databricks is valued at \$134 Billion. By 2025, generative AI had changed what customers wanted from Databricks: not just a place to store and query data, but the platform AI agents run on top of. It's the same instinct that built the company in the first place, take whatever data workload is currently painful and make it disappear into a single platform, just pointed at a new problem. 
 
 What started as a way to run Spark without babysitting a cluster became a way to trust your data, and now it's becoming a place agents read and write against without anyone stitching pipelines together by hand. The acquisitions and product launches keep piling up, but the through line hasn't changed since 2013: whatever the next hard problem in data and AI turns out to be, Databricks wants to already be building the answer to it. My upsert problem from 2019 turned out to be a pretty small piece of a much bigger story and I'm glad that I'm part of this revolution.
 
@@ -71,26 +71,26 @@ What started as a way to run Spark without babysitting a cluster became a way to
 
 - Dolly, an open source language model, released in March
 - Okera (data security and governance) acquired in May
-- MosaicML acquired for $1.4 billion in June, bringing LLM training infrastructure
-- Arcion (data replication) acquired for $100 million in October
-- Databricks SQL crossed $100 million ARR in April, a year after launch
+- MosaicML acquired for \$1.4 billion in June, bringing LLM training infrastructure
+- Arcion (data replication) acquired for \$100 million in October
+- Databricks SQL crossed \$100 million ARR in April, a year after launch
 
 ### 2024
 
-- Tabular (data management) acquired for over $1 billion
-- Databricks SQL grew to $400 million ARR
-- Series J funding of $10 billion in December, led by Thrive Capital
+- Tabular (data management) acquired for over \$1 billion
+- Databricks SQL grew to \$400 million ARR
+- Series J funding of \$10 billion in December, led by Thrive Capital
 
 ### 2025
 
 - Partnership with Anthropic announced in March to help companies build AI agents
-- $1 billion investment in San Francisco announced in March
-- Neon (serverless database) acquired for around $1 billion
+- \$1 billion investment in San Francisco announced in March
+- Neon (serverless database) acquired for around \$1 billion
 - Partnership with Google Cloud announced in June
 - New SQL editor became generally available in October
 - Mooncake Labs acquired in October, tightening the Lakebase to lakehouse integration
-- Series K of $1 billion closed in September at a valuation above $100 billion
-- AI products reached a $1.4 billion revenue run rate by Q4
+- Series K of \$1 billion closed in September at a valuation above \$100 billion
+- AI products reached a \$1.4 billion revenue run rate by Q4
 
 ### 2026
 
@@ -99,7 +99,7 @@ What started as a way to run Spark without babysitting a cluster became a way to
 - Delta Sharing rebranded and expanded into the open OpenSharing standard
 - Panther (cloud security analytics) acquired in June
 - Anthropic Claude Sonnet 5 and Claude Fable 5 added as Databricks hosted models in June
-- Data Warehousing crossed \$1.5 billion ARR run rate by June, up from $1.0 billion in Q3 2025
+- Data Warehousing crossed \$1.5 billion ARR run rate by June, up from \$1.0 billion in Q3 2025
 - Genie moving to pay as you go pricing starting July 6
 
 ---
